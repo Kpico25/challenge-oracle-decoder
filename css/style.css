@@ -1,0 +1,244 @@
+@import url('https://fonts.google.com/specimen/Montserrat');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightgray;
+  font-family: 'Montserrat', sans-serif;  
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  background-image: url('../img/matrix.gif');
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat; 
+}
+
+.main {
+  width: 80vw;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.titulo {
+  padding: 15px;
+  width: 30vw;
+  margin: auto;
+  text-align: center;
+}
+
+.box {
+  padding: 10px;
+  margin: 0 10px 0 10px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.5em;
+  width: 30vw;
+  height: 70vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center ;
+ }
+
+.btn-encriptar {
+  border: 0;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: green;
+  padding: .5rem 2rem;
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 2rem;
+  align-items: center;
+  height: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  width: 90%;   
+}
+
+.btn-desencriptar {
+  border: 0;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: green;
+  padding: .5rem 2rem;
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 2rem;
+  align-items: center;
+  height: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  width: 90%;
+}
+
+.text-input {
+  border-radius: 0.5em;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  display: block;
+  padding: 0.5em;
+  width: 100%;
+  height: 150px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-unlock-alt {
+  color: black;
+  top: auto;
+}
+
+.label{
+  color: #030303;
+  font-weight: bold;
+  margin-top: .3rem;
+}
+
+/*VENTANA MODAL */
+
+.pop-up{
+  background: rgba(48, 48, 48, 0.5);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+
+.pop-up-wrap{  
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  max-width: 950px;
+  transform: scale(0.6);
+  opacity: 1;
+  transition: .3s ease all;
+}
+
+.pop-up-title{
+  background: white;
+  flex-basis: 0;
+  flex-grow: 1.5;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-image: url('../img/alura.jpg');
+  background-size: 115%;
+  background-position: center;
+  background-repeat: no-repeat; 
+  border-radius: 0.5em; 
+}
+
+.pop-up-title::after{
+  content: '';
+  position: relative;
+  background: rgba(199, 193, 252, 0.75);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.close-modal {
+  background: red;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.3rem;
+  border-radius: 50%;
+  position: absolute;
+  right: -5px;
+  top: -10px;
+  cursor: pointer;
+}
+
+.pop-up.show{
+  visibility: visible;
+}
+
+.pop-up-wrap.show{
+  transform: scale(1);
+  opacity: 1;
+}
+
+.msg-box {
+  padding: 10px;
+  margin: 0 10px 0 10px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.5em;
+  width: 30vw;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.text-output {
+  border-radius: 0.5em;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  display: block;
+  padding: 0.5em;
+  width: 100%;
+  height: 250px;  
+}
+
+.fa-copy {
+cursor: pointer;
+color: white;
+font-size: 1rem;
+margin-right: 5px;
+}
+
+.msg-box > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .5rem 2rem;
+  margin: auto;
+  margin-top: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #186ef0;
+  color: white;
+  border-radius: 2rem;
+  border: none; 
+}
+
+.tooltip {
+  position: absolute;
+  opacity: 0;
+  top: 135px;
+  right: 360px;
+  background-color: #1ab394;
+  border-radius: 5px;
+  color: #fff;
+  padding: 10px 20px;
+  text-transform: none;
+  transition: all 0.75s ease;
+  width: 190px;
+}
+
+.tooltip.active {
+  opacity: 1;
+}

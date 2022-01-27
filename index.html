@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://kit.fontawesome.com/e70910b84d.js" crossorigin="anonymous"></script>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/script.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  
+</head>
+<body>
+
+  <main class="main">
+    <section class="form box">
+      <form action="">
+        <div class="texto">
+          <h1 class="titulo">Código Secreto</h1>
+        </div>
+        <label for="input-texto">Instrucciones: Solo debes usar letras minúsculas sin acento</label>
+        <input class="text-input" type="text" name="input-texto" id="input-texto" placeholder="Ingrese el texto aqui">
+        <input type="button" value="Encriptar" class="btn-encriptar"><i class="fas fa-lock"></i></input>
+        <input type="button" value="Desencriptar" class="btn-desencriptar"><i class="fas fa-lock-open"></i></input> 
+        <div class="label" >Dev K@pico25</div>
+        <img src="img/oracle.png"  width="80" height="70"> </img>
+      </form>
+    </section>
+
+    <div class="pop-up" id="modalAdd">
+    <div class="pop-up-wrap">
+    <div class="pop-up-title">    
+            
+    </div>  
+  
+  <section class="msg-box">                   
+    <h2 id="">Mensaje encriptado:</h2>
+    <div class="close-modal" id="btn-close">X </div>
+    <textarea class="text-output" type="text" id="msg"></textarea>
+    <button id="btn-copy"><i class='far fa-copy'></i> Copiar</button>
+    <div id="tooltip" class="tooltip">Copiado al portapapeles!</div>
+                  
+  </section>  
+                 
+  </div>
+  </div>
+  </div>     
+  </main>
+
+<script src="script.js">
+ 
+</script>
+</body>
+</html>
